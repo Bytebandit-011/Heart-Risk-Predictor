@@ -1,0 +1,150 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<form action="" method="post">
+    {{ form.hidden_tag() }}
+    <div>
+    {{ form.sex.label }}
+    <span style="font-size: 0.8em; color: #666; display: block; margin-bottom: 0.5em;">
+        (Male = 1, Female = 0)
+    </span>
+    {{ form.sex }}
+    {% if form.sex.errors %}
+        {% for error in form.sex.errors %}
+            <div>{{ error }}</div>
+        {% endfor %}
+    {% endif %}
+</div>
+
+    <br>
+    <div>
+        {{ form.age.label }}
+        {{ form.age }}
+        {% if form.age.errors %}
+            {% for error in form.age.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{ form.cp.label }}
+        {{ form.cp }}
+        {% if form.cp.errors %}
+            {% for error in form.cp.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+     <div>
+        {{ form.trestbps.label }}
+        {{ form.trestbps }}
+        {% if form.trestbps.errors %}
+            {% for error in form.trestbps.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{ form.chol.label }}
+        {{ form.chol }}
+        {% if form.chol.errors %}
+            {% for error in form.chol.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+     <div>
+        {{ form.restecg.label }}
+        {{ form.restecg }}
+        {% if form.restecg.errors %}
+            {% for error in form.restecg.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+     <div>
+        {{ form.fbs.label }}
+        {{ form.fbs }}
+        {% if form.fbs.errors %}
+            {% for error in form.fbs.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+     <div>
+        {{ form.thalach.label }}
+        {{ form.thalach }}
+        {% if form.thalach.errors %}
+            {% for error in form.thalach.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+     <div>
+        {{ form.exang.label }}
+        {{ form.exang }}
+        {% if form.exang.errors %}
+            {% for error in form.exang.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+     <div>
+        {{ form.oldpeak.label }}
+        {{ form.oldpeak }}
+        {% if form.oldpeak.errors %}
+            {% for error in form.oldpeak.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+     <div>
+        {{ form.slope.label }}
+        {{ form.slope }}
+        {% if form.slope.errors %}
+            {% for error in form.slope.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+     <div>
+        {{ form.ca.label }}
+        {{ form.ca }}
+        {% if form.ca.errors %}
+            {% for error in form.ca.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+     <div>
+        {{ form.thal.label }}
+        {{ form.thal }}
+        {% if form.thal.errors %}
+            {% for error in form.thal.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>{{ form.submit() }}</div>
+    <br>
+    <div>
+        {{ output }}
+    </div>
+    <br>
+    <div>
+        <p>Redirect to Homepage? <a href="{{ url_for('home') }}">Home</a></p>
+    </div>
+</form>
+{% endblock content %}
